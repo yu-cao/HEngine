@@ -2,5 +2,9 @@
 
 // For use by HEngine applications
 
-#include "HEngine/Core.h"
+#include <cstdio>
 #include "HEngine/Application.h"
+
+// -------Entry Point----------
+#include "HEngine/EntryPoint.h"
+// ---------------------------

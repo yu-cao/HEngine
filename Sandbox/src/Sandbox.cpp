@@ -14,9 +14,7 @@ public:
 	}
 };
 
-int main()
+HEngine::Application* HEngine::CreateApplication()
 {
-	Sandbox* sandbox = new Sandbox();
-	sandbox->Run();
-	delete sandbox;
+	return new Sandbox();
 }
