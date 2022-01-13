@@ -48,10 +48,10 @@ namespace HEngine
 	};
 
 
-	class HENGINE_API KeyReleaseEvent : public KeyEvent
+	class HENGINE_API KeyReleasedEvent : public KeyEvent
 	{
 	public:
-		KeyReleaseEvent(int keycode) : KeyEvent(keycode) {}
+		KeyReleasedEvent(int keycode) : KeyEvent(keycode) {}
 
 		EVENT_CLASS_TYPE(KeyReleased)
 

@@ -3,6 +3,7 @@
 #include "Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace HEngine
 {
@@ -31,6 +32,6 @@ namespace HEngine
 // Client Log MACRO
 #define HE_FATAL(...)	::HEngine::Log::GetClientLogger()->critical(__VA_ARGS__)
 #define HE_ERROR(...)	::HEngine::Log::GetClientLogger()->error(__VA_ARGS__)
-#define HE_WARN(...)		::HEngine::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define HE_INFO(...)		::HEngine::Log::GetClientLogger()->info(__VA_ARGS__)
+#define HE_WARN(...)	::HEngine::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define HE_INFO(...)	::HEngine::Log::GetClientLogger()->info(__VA_ARGS__)
 #define HE_TRACE(...)	::HEngine::Log::GetClientLogger()->trace(__VA_ARGS__)

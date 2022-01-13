@@ -5,10 +5,10 @@
 
 namespace HEngine
 {
-	class HENGINE_API MouseMoveEvent : public Event
+	class HENGINE_API MouseMovedEvent : public Event
 	{
 	public:
-		MouseMoveEvent(float x, float y) : m_MouseX(x), m_MouseY(y) { }
+		MouseMovedEvent(float x, float y) : m_MouseX(x), m_MouseY(y) { }
 
 		inline float GetX() const { return m_MouseX; }
 		inline float GetY() const { return m_MouseY; }
@@ -16,7 +16,7 @@ namespace HEngine
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "MouseMoveEvent: " << m_MouseX << ", " << m_MouseY;
+			ss << "MouseMovedEvent: " << m_MouseX << ", " << m_MouseY;
 			return ss.str();
 		}
 
@@ -73,10 +73,10 @@ namespace HEngine
 		EVENT_CLASS_TYPE(MouseButtonPressed)
 	};
 
-	class HENGINE_API MouseButtonRelasedEvent : public MouseButtonEvent
+	class HENGINE_API MouseButtonReleasedEvent : public MouseButtonEvent
 	{
 	public:
-		MouseButtonRelasedEvent(int button) : MouseButtonEvent(button) {}
+		MouseButtonReleasedEvent(int button) : MouseButtonEvent(button) {}
 
 		std::string ToString() const override
 		{
