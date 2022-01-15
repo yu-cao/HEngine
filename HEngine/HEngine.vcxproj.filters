@@ -7,6 +7,9 @@
     <Filter Include="HEngine\Events">
       <UniqueIdentifier>{47892F83-3357-2389-1CEB-93AF0858FFED}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HEngine\Platform">
+      <UniqueIdentifier>{77FE5429-63F7-737B-8C29-590078815387}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\HEngine.h" />
@@ -34,6 +37,12 @@
     <ClInclude Include="src\HEngine\Log.h">
       <Filter>HEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\HEngine\Platform\WindowsWindow.h">
+      <Filter>HEngine\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HEngine\Window.h">
+      <Filter>HEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\hepch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +51,9 @@
     </ClCompile>
     <ClCompile Include="src\HEngine\Log.cpp">
       <Filter>HEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HEngine\Platform\WindowsWindow.cpp">
+      <Filter>HEngine\Platform</Filter>
     </ClCompile>
     <ClCompile Include="src\hepch.cpp" />
   </ItemGroup>
