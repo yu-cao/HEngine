@@ -1,3 +1,4 @@
+#include "hepch.h"
 #include "Log.h"
 
 namespace HEngine
