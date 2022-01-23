@@ -4,6 +4,7 @@
 
 #include <cstdio>
 #include "HEngine/Application.h"
+#include "HEngine/Layer.h"
 #include "HEngine/Log.h"
 
 // -------Entry Point----------

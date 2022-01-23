@@ -84,6 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -109,6 +110,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -135,6 +137,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -157,6 +160,8 @@
     <ClInclude Include="src\HEngine\Events\Event.h" />
     <ClInclude Include="src\HEngine\Events\KeyEvent.h" />
     <ClInclude Include="src\HEngine\Events\MouseEvent.h" />
+    <ClInclude Include="src\HEngine\Layer.h" />
+    <ClInclude Include="src\HEngine\LayerStack.h" />
     <ClInclude Include="src\HEngine\Log.h" />
     <ClInclude Include="src\HEngine\Platform\WindowsWindow.h" />
     <ClInclude Include="src\HEngine\Window.h" />
@@ -164,6 +169,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\HEngine\Application.cpp" />
+    <ClCompile Include="src\HEngine\Layer.cpp" />
+    <ClCompile Include="src\HEngine\LayerStack.cpp" />
     <ClCompile Include="src\HEngine\Log.cpp" />
     <ClCompile Include="src\HEngine\Platform\WindowsWindow.cpp" />
     <ClCompile Include="src\hepch.cpp">
