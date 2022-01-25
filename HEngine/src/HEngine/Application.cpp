@@ -1,9 +1,8 @@
 #include "hepch.h"
 #include "Application.h"
 
+#include "glad/glad.h"
 #include "HEngine/Log.h"
-
-#include "GLFW/glfw3.h"
 
 namespace HEngine
 {

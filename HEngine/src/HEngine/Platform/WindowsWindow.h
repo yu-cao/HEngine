@@ -1,6 +1,7 @@
 #pragma once
-#include "GLFW/glfw3.h"
+
 #include "HEngine/Window.h"
+#include "GLFW/glfw3.h"
 
 namespace HEngine
 {

@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "HEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "HEngine/vendor/Glad/include"
 
 include "HEngine/vendor/GLFW"
+include "HEngine/vendor/Glad"
 
 project "HEngine"
 	location "HEngine"
@@ -37,12 +39,14 @@ project "HEngine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links 
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -54,7 +58,8 @@ project "HEngine"
 		defines
 		{
 			"HE_PLATFORM_WINDOWS",
-			"HE_BUILD_DLL"
+			"HE_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
