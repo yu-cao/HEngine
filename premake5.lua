@@ -14,9 +14,11 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "HEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "HEngine/vendor/Glad/include"
+IncludeDir["ImGui"] = "HEngine/vendor/imgui"
 
 include "HEngine/vendor/GLFW"
 include "HEngine/vendor/Glad"
+include "HEngine/vendor/imgui"
 
 project "HEngine"
 	location "HEngine"
@@ -40,13 +42,15 @@ project "HEngine"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links 
 	{
 		"GLFW",
 		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
@@ -64,7 +68,7 @@ project "HEngine"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 
 	filter "configurations:Debug"
