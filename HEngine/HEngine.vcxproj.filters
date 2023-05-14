@@ -93,9 +93,6 @@
     <ClInclude Include="src\HEngine\Window.h">
       <Filter>src\HEngine</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
-      <Filter>src\Platform\OpenGL</Filter>
-    </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRendererloader.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
@@ -1358,6 +1355,9 @@
     <ClCompile Include="src\HEngine\Application.cpp">
       <Filter>src\HEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\HEngine\ImGui\ImGuiBuild.cpp">
+      <Filter>src\HEngine\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\HEngine\ImGui\ImGuiLayer.cpp">
       <Filter>src\HEngine\ImGui</Filter>
     </ClCompile>
@@ -1369,9 +1369,6 @@
     </ClCompile>
     <ClCompile Include="src\HEngine\Log.cpp">
       <Filter>src\HEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
-      <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
       <Filter>src\Platform\Windows</Filter>

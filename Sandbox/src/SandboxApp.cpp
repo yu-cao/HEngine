@@ -1,5 +1,7 @@
 #include <HEngine.h>
 
+//#include "imgui/imgui.h"
+
 class ExampleLayer : public HEngine::Layer
 {
 public:
@@ -12,6 +14,13 @@ public:
 			HE_TRACE("Tab Key is Pressed!(poll)");
 		}
 	}
+
+	//virtual void OnImGuiRender() override
+	//{
+	//	//ImGui::Begin("Test");
+	//	//ImGui::Text("Hello World");
+	//	//ImGui::End();
+	//}
 
 	void OnEvent(HEngine::Event& event) override
 	{
@@ -34,7 +43,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new HEngine::ImGuiLayer());
 	}
 
 	~Sandbox()
